@@ -28,6 +28,8 @@ class DoublyLinkedList {
 		if (!this.tail) {
 			this.tail = this.head;
 		}
+
+		return node;
 	}
 
 	prepend(node) {
@@ -43,6 +45,8 @@ class DoublyLinkedList {
 		if (!this.head) {
 			this.head = this.tail;
 		}
+
+		return node;
 	}
 
 	insertAfter(target, node) {
@@ -59,6 +63,8 @@ class DoublyLinkedList {
 		node.next = target.next;
 		target.next = node;
 		node.prev = target;
+
+		return node;
 	}
 
 	insertBefore(target, node) {
@@ -74,6 +80,8 @@ class DoublyLinkedList {
 		node.prev = target.prev;
 		target.prev = node;
 		node.next = target;
+
+		return node;
 	}
 
 	behead() {
@@ -181,7 +189,6 @@ list.append(node3);
 // list.remove(node1);
 // list.remove(node2);
 // list.remove(node3);
-// console.log(node3);
 
 // list.append(new Node(777));
 
@@ -189,7 +196,6 @@ list.insertBefore(node1, new Node(888));
 
 list.listNodes();
 list.getSize();
-// console.log(node3);
 
 // console.log(list.head);
 console.log('HEAD: ' + list.head?.data);
